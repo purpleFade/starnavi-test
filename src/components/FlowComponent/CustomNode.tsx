@@ -12,7 +12,7 @@ const CustomNode: React.FC<Props> = ({ data }) => {
     <article
       className={`
         px-2 py-2 shadow-md relative w-40 
-        rounded-md bg-primary hover:bg-primary-hover`}
+        rounded-md bg-primary hover:bg-primary-hover bg-gray-100 `}
     >
       <div
         className={`h-auto flex flex-col justify-center items-center bg-bgGrey px-2 py-2`}

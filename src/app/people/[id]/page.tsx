@@ -16,25 +16,6 @@ type Props = {
   searchParams?: { page: string; search: string };
 };
 
-const placeholder = {
-  name: 'Obi-Wan Kenobi',
-  height: '182',
-  mass: '77',
-  hair_color: 'auburn, white',
-  skin_color: 'fair',
-  eye_color: 'blue-gray',
-  birth_year: '57BBY',
-  gender: 'male',
-  homeworld: '20',
-  films: [1, 2, 3, 4, 5, 6],
-  species: [1],
-  vehicles: [38],
-  starships: [48, 59, 64, 65, 74],
-  created: '2014-12-10T16:16:29.192000Z',
-  edited: '2014-12-20T21:17:50.325000Z',
-  url: 'https://sw-api.starnavi.io/people/10/',
-};
-
 const PersonPage: React.FC<Props> = ({ params, searchParams }) => {
   const dispatch = useAppDispatch();
   const { films } = useAppSelector((state) => state.films);
@@ -59,7 +40,7 @@ const PersonPage: React.FC<Props> = ({ params, searchParams }) => {
   }, [person, films, starships]);
 
   return (
-    <div className='bg-gray-100'>
+    <div className=''>
       <BackButton />
       <div className='h-screen w-screen flex items-center justify-center'>
         <FlowComponent nodes={updatedNodes} edges={initialEdges} />

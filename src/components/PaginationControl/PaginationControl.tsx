@@ -35,9 +35,9 @@ const PaginationControl = () => {
           dispatch(peopleActions.previousPage());
         }}
         disabled={previous === null}
-        className='px-4 py-2 rounded-md bg-gray-200 text-gray-700 hover:bg-gray-300 disabled:opacity-50 active:bg-gray-400'
+        className='px-4 py-2 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-300 disabled:opacity-50 active:bg-gray-400'
       >
-        Prev Page
+        Previous
       </button>
       {paginationNumber.map((number) => (
         <button
@@ -46,7 +46,7 @@ const PaginationControl = () => {
             router.push(`?page=${number}`);
             dispatch(peopleActions.setCurrentPage(number));
           }}
-          className={`px-4 py-2 rounded-md bg-gray-200 text-gray-700 hover:bg-gray-300 ml-2 ${
+          className={`px-4 py-2 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-300 ml-2 ${
             Number(page) === number ? 'bg-gray-400' : ''
           } active:bg-gray-500`}
         >
@@ -59,9 +59,9 @@ const PaginationControl = () => {
           dispatch(peopleActions.nextPage());
         }}
         disabled={next === null}
-        className='px-4 py-2 rounded-md bg-gray-200 text-gray-700 hover:bg-gray-300 ml-2 disabled:opacity-50 active:bg-gray-400'
+        className='px-4 py-2 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-300 ml-2 disabled:opacity-50 active:bg-gray-400'
       >
-        Next Page
+        Next
       </button>
     </div>
   );

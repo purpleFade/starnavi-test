@@ -19,6 +19,7 @@ const Table = () => {
 
   return (
     <div className='flex items-center justify-center h-screen flex-col gap-5'>
+      <h1 className='text-white text-5xl font-bold mb-5'>The Star Wars Characters</h1>
       <div className='grid grid-cols-2 gap-4'>
         {results.map((character) => (
           <PersonCard key={character.name} character={character} />
